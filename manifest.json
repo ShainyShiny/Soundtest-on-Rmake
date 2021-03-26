@@ -1,7 +1,7 @@
 {
     "name": "Soundtest on Rmake",
-    "description": "公開されている音楽・効果音素材を試聴できる簡易プレイヤー",
-    "version": "1.1",
+    "description": "Rmakeの音楽・効果音素材を試聴できる簡易プレイヤー",
+    "version": "1.2",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
@@ -10,6 +10,14 @@
         {
             "matches": [
                 "https://rmake.jp/published_items/*"
+            ],
+            "js": [
+                "content_published.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://rmake.jp/create/materials/*"
             ],
             "js": [
                 "content.js"
